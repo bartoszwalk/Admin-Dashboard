@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    grid-auto-flow: row;
+    margin: 0;
+
+
+}
+
+#sidebar,
+#main,
+#header {
+    border: 1px solid black;
+    display: grid;
+}
+
+#sidebar {
+    background-color: red;
+    grid-row: span 2;
+}
+
+#header {
+    background-color: aqua;
+}
+
+#main {
+    background-color: brown;
+    grid-column-start: 2;
+}
