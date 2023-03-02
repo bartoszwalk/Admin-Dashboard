@@ -102,6 +102,12 @@ body {
 
 }
 
+.profile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
 .profile h2 {
     padding-left: 10px;
 }
@@ -156,6 +162,17 @@ body {
     width: 200px;
     padding: 10px 20px;
     display: flex;
+}
+
+.user {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.user > h8 {
+    color: rgb(156, 156, 156);
 }
 
 #projects-container{
