@@ -18,7 +18,7 @@ body {
     height: 100vh;
     display: grid;
     grid-template-rows: 1fr 4fr;
-    grid-template-columns: 1fr 3fr;
+    grid-template-columns: 1fr 4fr;
     grid-auto-flow: row;
     margin: 0;
 
@@ -31,13 +31,14 @@ body {
 #search-container,
 #profile,
 #greeting,
-#new-posts
+#new-posts,
+#projects-container
  {
     display: grid;
 }
 
 #sidebar {
-    background-color: #2b40fd;
+    background-color: #d97706;
     grid-row: span 2;
     display: flex;
     flex-direction: column;
@@ -47,7 +48,7 @@ body {
 }
 
 #header {
-    background-color: #e7eaf6;
+    background-color: #ffffff;
     display: grid;
     grid-template-rows: 1fr 2fr;
     grid-template-columns: 7fr 3fr;
@@ -55,25 +56,40 @@ body {
 }
 
 #main {
-    background-color: #5aaffd ;
+    background-color: #fde68a ;
     grid-column-start: 2;
     grid-template-rows: 1fr 1fr;
-    grid-template-columns: 3fr 1fr;
+    grid-template-columns: 4fr 1fr;
     padding: 20px;
+    column-gap: 30px;
 }
 
 .navigation-lists {
     display: flex;
     flex-direction: column;
     list-style: none;
-    gap: 10px;
     font-size: 1.2rem;
 }
+
+.navigation-lists > li {
+    margin-bottom: -20px;
+    margin-left: -20px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.nav-img {
+    -webkit-filter: brightness(0) invert(1);
+    filter: brightness(0) invert(1);
+    height: 20px;
+}
+
 
 #search-container {
     align-items: center;
     display: flex;
-    gap: 20px;
+    gap: 50px;
 }
 
 #search-container input {
@@ -98,7 +114,7 @@ body {
 }
 
 .new-posts button {
-    background-color: rgb(0, 102, 255);
+    background-color: #d97706;
     border: none;
     color: white;
     text-align: center;
@@ -122,7 +138,7 @@ body {
     background-color: white;
     padding: 10px 20px;
     border-radius: 20px;
-    width: 350px;
+    width: 200px;
     border: 2px solid rgb(224, 224, 224) 
 }
 
@@ -137,7 +153,22 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    width: 350px;
+    width: 200px;
     padding: 10px 20px;
     display: flex;
+}
+
+#projects-container{
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 15px;
+}
+
+.projects-card {
+    background-color: white;
+    border-radius: 20px;
+    height: 225px;
+    padding: 10px;
+    padding-left: 30px;
+    border-left: 10px solid #d97706;
 }
